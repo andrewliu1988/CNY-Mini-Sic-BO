@@ -1,8 +1,6 @@
-// console.log('hello world')
-
-// let diceOne = document.querySelector('.diceOne')
-// let diceTwo = document.querySelector('.diceTwo')
-// let diceThree = document.querySelector('.diceThree')
+let diceOne = document.querySelector('.one')
+let diceTwo = document.querySelector('.two')
+let diceThree = document.querySelector('.three')
 // let diceTotal = document.querySelector('.diceTotal')
 const big = document.querySelector('.big')
 const small = document.querySelector('.small')
@@ -10,30 +8,36 @@ let betAmmount = document.querySelector('#betAmmount')
 const betBtn = document.querySelector('.betBtn')
 const threeOfAKind = document.querySelectorAll('.three')
 
-function diceOne(min, max) {
+/*
+create a function that captures a dice value 
+this function should push the final value to arr
+once all dice are rolled reduce all arr value to total sum 
+*/
+
+function rollDie(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min) + min)
 }
-console.log(diceOne(1, 7))
 
-function diceTwo(min, max) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min) + min)
+function diceTotal() {
+  let diceArr = []
+  diceArr.push(rollDie(1, 7))
+  diceArr.push(rollDie(1, 7))
+  diceArr.push(rollDie(1, 7))
+
+  total = diceArr.reduce((acc, value) => {
+    return acc + value
+  }, 0)
+  console.log(diceArr)
+  return total
 }
-console.log(diceTwo(1, 7))
+console.log(diceTotal())
 
-function diceThree(min, max) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min) + min)
-}
-console.log(diceThree(1, 7))
+// const placeBet = function (event) {
+//   let bet = event.target
+//   rollDie(1, 7)
+// }
+// console.log(placeBet)
 
-const placeBet = function (event) {
-  let bet = event.target
-}
-console.log(placeBet)
-
-betBtn.addEventListener('click', placeBet)
+// betBtn.addEventListener('click', placeBet)
