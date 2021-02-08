@@ -23,8 +23,11 @@ function rollDie(min, max) {
 function diceTotal() {
   let diceArr = []
   diceArr.push(rollDie(1, 7))
+  diceOne.innerText = diceArr[0]
   diceArr.push(rollDie(1, 7))
+  diceTwo.innerText = diceArr[1]
   diceArr.push(rollDie(1, 7))
+  diceThree.innerText = diceArr[2]
 
   total = diceArr.reduce((acc, value) => {
     return acc + value
@@ -36,9 +39,6 @@ console.log(diceTotal())
 
 const placeBet = function (event) {
   bet = event.target
-  diceOne.innerText = rollDie(1, 7)
-  diceTwo.innerText = rollDie(1, 7)
-  diceThree.innerText = rollDie(1, 7)
   diceTotals.innerText = diceTotal()
 }
 

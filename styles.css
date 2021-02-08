@@ -9,6 +9,7 @@ body {
 
 .top {
   display: flex;
+  font-size: 25px;
   justify-content: center;
   align-items: center;
   padding: 10px;
