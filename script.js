@@ -1,7 +1,7 @@
 let diceOne = document.querySelector('.one')
 let diceTwo = document.querySelector('.two')
-let diceThree = document.querySelector('.three')
-// let diceTotal = document.querySelector('.diceTotal')
+let diceThree = document.querySelector('.dthree')
+let diceTotals = document.querySelector('.total')
 const big = document.querySelector('.big')
 const small = document.querySelector('.small')
 let betAmmount = document.querySelector('#betAmmount')
@@ -34,10 +34,12 @@ function diceTotal() {
 }
 console.log(diceTotal())
 
-// const placeBet = function (event) {
-//   let bet = event.target
-//   rollDie(1, 7)
-// }
-// console.log(placeBet)
+const placeBet = function (event) {
+  bet = event.target
+  diceOne.innerText = rollDie(1, 7)
+  diceTwo.innerText = rollDie(1, 7)
+  diceThree.innerText = rollDie(1, 7)
+  diceTotals.innerText = diceTotal()
+}
 
-// betBtn.addEventListener('click', placeBet)
+betBtn.addEventListener('click', placeBet)
