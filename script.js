@@ -10,7 +10,8 @@ let gameMessage = document.querySelector('.gameMessage')
 let moneyDisplay = document.querySelector('.moneyDisplay')
 let gameChoice = ''
 let gameActive = true
-let winOrLose = 0
+
+let bank = 500
 
 function rollDie(min, max) {
   min = Math.ceil(min)
@@ -57,63 +58,58 @@ function compare() {
       gameMessage.innerText = 'Lose'
       loseMoney()
     }
+  } else if (gameChoice === 'threeOfAKind') {
+    if (
+      diceArr[0] === diceArr[1] &&
+      diceArr[0] === diceArr[2] &&
+      gameChoice === 'threeOfAKind'
+    )
+      gameMessage.innerText = 'Win'
+    console.log('win')
+    console.log(diceArr)
+    return
+  } else {
+    gameMessage.innerText = 'Lose'
+    console.log('lose')
+    return
   }
-  //  else if (gameChoice === 'threeOfAKind') {
-  //   if (
-  //     diceArr[0] === diceArr[1] &&
-  //     diceArr[0] === diceArr[2] &&
-  //     gameChoice === 'threeOfAKind'
-  //   )
-  //     gameMessage.innerText = 'Win'
-  //   console.log('win')
-  //   console.log(diceArr)
-  //   return
-  // } else {
-  //   gameMessage.innerText = 'Lose'
-  //   console.log('lose')
-  //   return
-  // }
   gameChoice = ''
 }
 
 const placeBet = function (event) {
   bet = event.target
-  diceArr = []
-  rollingDice()
-  diceResult.innerText = ''
-  diceResult.innerText = diceTotal()
-  compare()
+  if (betAmount.value == 0) {
+    gameMessage.innerText = 'Please enter bet amount'
+  } else {
+    diceArr = []
+    rollingDice()
+    diceResult.innerText = ''
+    diceResult.innerText = diceTotal()
+    compare()
+  }
 }
 
-const winMoney = (add) => {
-  moneyDisplay.innerHTML = winOrLose
-  let addMoney = betAmount.value
-  winOrLose += parseInt(addMoney)
-  updateMoneyDisplay()
+const winMoney = () => {
+  bank += parseInt(betAmount.value)
+  moneyDisplay.innerText = `$${parseInt(bank)}`
 }
 
-const loseMoney = (minus) => {
-  moneyDisplay.innerHTML = winOrLose
-  let minusMoney = betAmount.value
-  winOrLose -= parseInt(minusMoney)
-  updateMoneyDisplay()
+const loseMoney = () => {
+  bank -= parseInt(betAmount.value)
+  moneyDisplay.innerText = `$${parseInt(bank)}`
 }
 
-function updateMoneyDisplay() {
-  moneyDisplay.innerHTML = parseInt(winOrLose)
-}
-
-const placeBig = function (event) {
+const placeBig = function () {
   gameChoice = 'big'
   console.log(gameChoice)
 }
 
-const placeSmall = function (event) {
+const placeSmall = function () {
   gameChoice = 'small'
   console.log(gameChoice)
 }
 
-const placeThreeOfAKind = function (event) {
+const placeThreeOfAKind = function () {
   gameChoice = 'threeOfAKind'
   console.log(gameChoice)
 }
