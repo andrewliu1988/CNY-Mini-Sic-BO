@@ -7,7 +7,7 @@ const small = document.querySelector('.small')
 let betAmmount = document.querySelector('#betAmmount')
 const betBtn = document.querySelector('.betBtn')
 const threeOfAKind = document.querySelectorAll('.three')
-let gameMessage = docoument.querySelector('.gameMessage')
+let gameMessage = document.querySelector('.gameMessage')
 let gameChoice = ''
 
 function rollDie(min, max) {
@@ -36,17 +36,22 @@ function diceTotal() {
    if dice total is < 11 it's small  */
 
 function compare() {
+  gameMessage.innerText = ''
   console.log(total)
   if (gameChoice == 'big') {
     if (total >= 11) {
+      gameMessage.innerText = 'Win'
       console.log('win')
     } else {
+      gameMessage.innerText = 'Lose'
       console.log('lose')
     }
   } else if (gameChoice == 'small') {
     if (total < 11) {
+      gameMessage.innerText = 'Win'
       console.log('win')
     } else {
+      gameMessage.innerText = 'Lose'
       console.log('lose')
     }
   }
