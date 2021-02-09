@@ -6,9 +6,9 @@ const big = document.querySelector('.big')
 const small = document.querySelector('.small')
 let betAmmount = document.querySelector('#betAmmount')
 const betBtn = document.querySelector('.betBtn')
-// const threeOfAKind = document.querySelectorAll('.threeOfAKind')
 let gameMessage = document.querySelector('.gameMessage')
 let gameChoice = ''
+let gameActive = true
 
 function rollDie(min, max) {
   min = Math.ceil(min)
@@ -69,6 +69,7 @@ function compare() {
   // }
   gameChoice = ''
 }
+
 const placeBet = function (event) {
   bet = event.target
   diceArr = []

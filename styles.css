@@ -5,7 +5,8 @@ body {
   flex-direction: column;
   justify-content: center;
   /* background: url(./chinese-new-year-2021-design-with-golden-ox-vector.png); */
-  background-color: #cc232a;
+  background-color: #d71c15;
+  /* background-color: #cc232a; */
   background-size: cover;
   text-align: center;
 }
@@ -81,7 +82,6 @@ body {
   /* border: 2px solid black; */
   margin-right: 40px;
   text-align: center;
-  cursor: pointer;
 }
 
 .btnArea {
@@ -100,7 +100,6 @@ body {
   height: 30px;
   text-align: center;
   margin-top: 20px;
-  cursor: pointer;
 }
 
 .small {
@@ -110,7 +109,6 @@ body {
   /* border: 2px solid black; */
   margin-left: 40px;
   text-align: center;
-  cursor: pointer;
 }
 
 .bottom {
@@ -125,16 +123,17 @@ img {
 
 .threeOfAKind {
   background-color: white;
-  cursor: pointer;
 }
 
 .big,
 .small,
 .betBtn,
 .threeOfAKind {
-  background-color: #d71c15;
+  background-color: #cc232a;
   font-weight: bold;
   font-size: 1rem;
+  /* cursor: pointer; */
+  cursor: url(cow-face-samsung.png), auto;
 }
 
 .big:hover,
