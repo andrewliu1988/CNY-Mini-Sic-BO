@@ -58,14 +58,15 @@ function compare() {
       gameMessage.innerText = 'Lose'
       console.log('lose')
     }
-  } else if (gameChoice === 'threeOfAKind') {
-    if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2])
-      gameMessage.innerText = 'Win'
-    console.log('win')
-  } else {
-    gameMessage.innerText = 'Lose'
-    console.log('lose')
   }
+  // else if (gameChoice === 'threeOfAKind') {
+  //   if (diceArr[0] === diceArr[1] && diceArr[0] === diceArr[2])
+  //     gameMessage.innerText = 'Win'
+  //   console.log('win')
+  // } else {
+  //   gameMessage.innerText = 'Lose'
+  //   console.log('lose')
+  // }
   gameChoice = ''
 }
 const placeBet = function (event) {

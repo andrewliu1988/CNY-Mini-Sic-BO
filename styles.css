@@ -4,7 +4,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(216, 11, 11);
+  /* background: url(./chinese-new-year-2021-design-with-golden-ox-vector.png); */
+  background-color: #cc232a;
+  background-size: cover;
   text-align: center;
 }
 
@@ -20,6 +22,8 @@ body {
   width: 375px;
   height: 375px;
   margin: 0 auto;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
 .dice {
@@ -71,12 +75,13 @@ body {
 }
 
 .big {
-  width: 100px;
-  height: 50px;
+  width: 250px;
+  height: 125px;
   /* padding: 20px 20px 20px 20px; */
   /* border: 2px solid black; */
-  margin-right: 20px;
+  margin-right: 40px;
   text-align: center;
+  cursor: pointer;
 }
 
 .btnArea {
@@ -84,13 +89,10 @@ body {
   flex-direction: column;
 }
 
-.betAmmount {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  width: 100px;
+#betAmount {
+  width: 150px;
   height: 50px;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
 .betBtn {
@@ -98,15 +100,17 @@ body {
   height: 30px;
   text-align: center;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .small {
-  width: 100px;
-  height: 50px;
+  width: 250px;
+  height: 125px;
   /* padding: 20px; */
   /* border: 2px solid black; */
-  margin-left: 20px;
+  margin-left: 40px;
   text-align: center;
+  cursor: pointer;
 }
 
 .bottom {
@@ -120,5 +124,22 @@ img {
 }
 
 .threeOfAKind {
-  background-color: rgb(255, 255, 0);
+  background-color: white;
+  cursor: pointer;
+}
+
+.big,
+.small,
+.betBtn,
+.threeOfAKind {
+  background-color: #d71c15;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.big:hover,
+.small:hover,
+.betBtn:hover,
+.threeOfAKind:hover {
+  background-color: #ecc926;
 }
