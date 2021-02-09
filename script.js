@@ -4,11 +4,13 @@ let diceThree = document.querySelector('.three')
 let diceResult = document.querySelector('#total')
 const big = document.querySelector('.big')
 const small = document.querySelector('.small')
-let betAmmount = document.querySelector('#betAmmount')
+let betAmount = document.querySelector('#betAmount')
 const betBtn = document.querySelector('.betBtn')
 let gameMessage = document.querySelector('.gameMessage')
+let moneyDisplay = document.querySelector('.moneyDisplay')
 let gameChoice = ''
 let gameActive = true
+let winOrLose = 0
 
 function rollDie(min, max) {
   min = Math.ceil(min)
@@ -45,27 +47,34 @@ function compare() {
   if (gameChoice === 'big') {
     if (diceSum >= 11 && diceSum <= 17) {
       gameMessage.innerText = 'Win'
-      console.log('win')
+      winMoney()
     } else {
       gameMessage.innerText = 'Lose'
-      console.log('lose')
+      loseMoney()
     }
   } else if (gameChoice === 'small') {
     if (diceSum < 11 && diceSum >= 4) {
       gameMessage.innerText = 'Win'
-      console.log('win')
+      winMoney()
     } else {
       gameMessage.innerText = 'Lose'
-      console.log('lose')
+      loseMoney()
     }
   }
-  // else if (gameChoice === 'threeOfAKind') {
-  //   if (diceArr[0] === diceArr[1] && diceArr[0] === diceArr[2])
+  //  else if (gameChoice === 'threeOfAKind') {
+  //   if (
+  //     diceArr[0] === diceArr[1] &&
+  //     diceArr[0] === diceArr[2] &&
+  //     gameChoice === 'threeOfAKind'
+  //   )
   //     gameMessage.innerText = 'Win'
   //   console.log('win')
+  //   console.log(diceArr)
+  //   return
   // } else {
   //   gameMessage.innerText = 'Lose'
   //   console.log('lose')
+  //   return
   // }
   gameChoice = ''
 }
@@ -77,6 +86,24 @@ const placeBet = function (event) {
   diceResult.innerText = ''
   diceResult.innerText = diceTotal()
   compare()
+}
+
+const winMoney = (add) => {
+  moneyDisplay.innerText = winOrLose
+  let addMoney = betAmount.value
+  winOrLose += parseInt(addMoney)
+  updateMoneyDisplay()
+}
+
+const loseMoney = (minus) => {
+  moneyDisplay.innerText = winOrLose
+  let minusMoney = betAmount.value
+  winOrLose -= parseInt(minusMoney)
+  updateMoneyDisplay()
+}
+
+function updateMoneyDisplay() {
+  moneyDisplay.innerText = parseInt(winOrLose)
 }
 
 const placeBig = function (event) {
