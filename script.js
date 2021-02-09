@@ -58,21 +58,22 @@ function compare() {
       gameMessage.innerText = 'Lose'
       loseMoney()
     }
-  } else if (gameChoice === 'threeOfAKind') {
-    if (
-      diceArr[0] === diceArr[1] &&
-      diceArr[0] === diceArr[2] &&
-      gameChoice === 'threeOfAKind'
-    )
-      gameMessage.innerText = 'Win'
-    console.log('win')
-    console.log(diceArr)
-    return
-  } else {
-    gameMessage.innerText = 'Lose'
-    console.log('lose')
-    return
   }
+  // else if (gameChoice === 'threeOfAKind') {
+  //   if (
+  //     diceArr[0] === diceArr[1] &&
+  //     diceArr[0] === diceArr[2] &&
+  //     gameChoice === 'threeOfAKind'
+  //   )
+  //     gameMessage.innerText = 'Win'
+  //   console.log('win')
+  //   console.log(diceArr)
+  //   return
+  // } else {
+  //   gameMessage.innerText = 'Lose'
+  //   console.log('lose')
+  //   return
+  // }
   gameChoice = ''
 }
 
@@ -80,6 +81,8 @@ const placeBet = function (event) {
   bet = event.target
   if (betAmount.value == 0) {
     gameMessage.innerText = 'Please enter bet amount'
+  } else if (gameChoice == '') {
+    gameMessage.innerHTML = 'Please choose what to bet on'
   } else {
     diceArr = []
     rollingDice()
