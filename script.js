@@ -1,7 +1,7 @@
 let diceOne = document.querySelector('.one')
 let diceTwo = document.querySelector('.two')
-let diceThree = document.querySelector('.dthree')
-let diceTotals = document.querySelector('#total')
+let diceThree = document.querySelector('.three')
+let diceResult = document.querySelector('#total')
 const big = document.querySelector('.big')
 const small = document.querySelector('.small')
 let betAmmount = document.querySelector('#betAmmount')
@@ -30,22 +30,20 @@ function rollingDice() {
   return diceArr
 }
 function diceTotal() {
-  // diceTotals.innerText = ''
-  total = diceArr.reduce((acc, value) => {
+  diceSum = diceArr.reduce((acc, value) => {
     return acc + value
   }, 0)
-  return total
+  return diceSum
 }
-console.log(diceTotals)
 
 /* if dice total is >= 11 it's big
    if dice total is < 11 it's small  */
 
 function compare() {
   gameMessage.innerText = ''
-  console.log(total)
+  console.log(diceSum)
   if (gameChoice === 'big') {
-    if (total >= 11 && total <= 17) {
+    if (diceSum >= 11 && diceSum <= 17) {
       gameMessage.innerText = 'Win'
       console.log('win')
     } else {
@@ -53,7 +51,7 @@ function compare() {
       console.log('lose')
     }
   } else if (gameChoice === 'small') {
-    if (total < 11 && total >= 4) {
+    if (diceSum < 11 && diceSum >= 4) {
       gameMessage.innerText = 'Win'
       console.log('win')
     } else {
@@ -74,8 +72,8 @@ const placeBet = function (event) {
   bet = event.target
   diceArr = []
   rollingDice()
-  diceTotals.innerText = ''
-  diceTotals.innerText = diceTotal()
+  diceResult.innerText = ''
+  diceResult.innerText = diceTotal()
   compare()
 }
 
@@ -91,6 +89,7 @@ const placeSmall = function (event) {
 
 const placeThreeOfAKind = function (event) {
   gameChoice = 'threeOfAKind'
+  console.log(gameChoice)
 }
 
 betBtn.addEventListener('click', placeBet)
