@@ -37,6 +37,7 @@ body {
   grid-row-start: 1;
   justify-self: center;
   border: 2px solid black;
+  align-self: end;
 }
 
 #dieTwo {
@@ -44,13 +45,15 @@ body {
   grid-row-start: 2;
   justify-self: right;
   border: 2px solid black;
+  align-self: center;
 }
 
 #dieThree {
-  grid-column-start: 3;
+  grid-column-start: 2;
   grid-row-start: 2;
-  justify-self: left;
+  justify-self: right;
   border: 2px solid black;
+  align-self: end;
 }
 
 #total {
@@ -111,8 +114,11 @@ body {
   justify-content: space-evenly;
 }
 
-.three {
-  width: 100px;
+img {
+  width: 50px;
   height: 50px;
-  border: 2px solid black;
+}
+
+.threeOfAKind {
+  background-color: rgb(255, 255, 0);
 }

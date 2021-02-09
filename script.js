@@ -39,7 +39,7 @@ function compare() {
   gameMessage.innerText = ''
   console.log(total)
   if (gameChoice == 'big') {
-    if (total >= 11) {
+    if (total >= 11 && total <= 17) {
       gameMessage.innerText = 'Win'
       console.log('win')
     } else {
@@ -47,7 +47,7 @@ function compare() {
       console.log('lose')
     }
   } else if (gameChoice == 'small') {
-    if (total < 11) {
+    if (total < 11 && total >= 4) {
       gameMessage.innerText = 'Win'
       console.log('win')
     } else {
@@ -64,13 +64,11 @@ const placeBet = function (event) {
 }
 
 const placeBig = function (event) {
-  // betBig = event.target
   gameChoice = 'big'
   console.log(gameChoice)
 }
 
 const placeSmall = function (event) {
-  // betSmall = event.target
   gameChoice = 'small'
   console.log(gameChoice)
 }
