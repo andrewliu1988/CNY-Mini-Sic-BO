@@ -77,7 +77,7 @@ function compare() {
   gameChoice = ''
 }
 
-const placeBet = function (event) {
+const placeBet = (event) => {
   bet = event.target
   if (betAmount.value == 0) {
     gameMessage.innerText = 'Please enter bet amount'
@@ -102,17 +102,17 @@ const loseMoney = () => {
   moneyDisplay.innerText = `$${parseInt(bank)}`
 }
 
-const placeBig = function () {
+const placeBig = () => {
   gameChoice = 'big'
   console.log(gameChoice)
 }
 
-const placeSmall = function () {
+const placeSmall = () => {
   gameChoice = 'small'
   console.log(gameChoice)
 }
 
-const placeThreeOfAKind = function () {
+const placeThreeOfAKind = () => {
   gameChoice = 'threeOfAKind'
   console.log(gameChoice)
 }
