@@ -9,17 +9,14 @@ const betBtn = document.querySelector('.betBtn')
 let gameMessage = document.querySelector('.gameMessage')
 let moneyDisplay = document.querySelector('.moneyDisplay')
 let gameChoice = ''
-let gameActive = true
-
 let bank = 500
+let diceArr = []
 
 function rollDie(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min) + min)
 }
-
-let diceArr = []
 
 function rollingDice() {
   diceOne.innerText = ''
@@ -59,22 +56,22 @@ function compare() {
       gameMessage.innerText = 'Lose'
       loseMoney()
     }
+  } else if (gameChoice === 'threeOfAKind') {
+    if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
+      gameMessage.innerText = 'Win'
+      console.log('win')
+      console.log(diceArr)
+      return
+    } else {
+      gameMessage.innerText = 'Lose'
+      console.log('lose')
+      return
+    }
+  } else {
+    gameMessage.innerText = 'Lose'
+    console.log('lose')
+    return
   }
-  // else if (gameChoice === 'threeOfAKind') {
-  //   if (
-  //     diceArr[0] === diceArr[1] &&
-  //     diceArr[0] === diceArr[2] &&
-  //     gameChoice === 'threeOfAKind'
-  //   )
-  //     gameMessage.innerText = 'Win'
-  //   console.log('win')
-  //   console.log(diceArr)
-  //   return
-  // } else {
-  //   gameMessage.innerText = 'Lose'
-  //   console.log('lose')
-  //   return
-  // }
   gameChoice = ''
 }
 
