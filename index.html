@@ -7,23 +7,26 @@
   <link rel="stylesheet" href="styles.css">
   <title>Dice Roll</title>
 </head>
+<h1>Dice Roll</h1>
+
 <body>
   <section class ="top">
-    <div class = "dice one"></div>
-    <div class = "dice two"></div>
-    <div class = "dice dthree"></div>
-    <div class = "dice total"></div>
+    <div class = "dice one"id = "dieOne"></div>
+    <div class = "dice two" id = "dieTwo"></div>
+    <div class = "dice dthree" id = "dieThree"></div>
+    <div class = "dice total" id = "total"></div>
     <!-- <div class= "moneyDisplay">0000</div> -->
   </section>
 
+  <h2 class ="gameMessage">Win</h2>
   
   <section class ="mid">
-    <div class = "big">Big</div>
+    <button class = "big">Big</button>
       <section class ='btnArea'>
         <input type="text" id="betAmmount" placeholder="Bet Ammount">
         <button class = betBtn>Place Bet</button>
       </section>
-    <div class = "small">Small</div>
+    <button class = "small">Small</button>
   </section>
 
 <section class ="bottom">

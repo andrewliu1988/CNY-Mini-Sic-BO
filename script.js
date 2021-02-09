@@ -7,12 +7,8 @@ const small = document.querySelector('.small')
 let betAmmount = document.querySelector('#betAmmount')
 const betBtn = document.querySelector('.betBtn')
 const threeOfAKind = document.querySelectorAll('.three')
-
-/*
-create a function that captures a dice value 
-this function should push the final value to arr
-once all dice are rolled reduce all arr value to total sum 
-*/
+let gameMessage = docoument.querySelector('.gameMessage')
+let gameChoice = ''
 
 function rollDie(min, max) {
   min = Math.ceil(min)
@@ -32,14 +28,48 @@ function diceTotal() {
   total = diceArr.reduce((acc, value) => {
     return acc + value
   }, 0)
-  console.log(diceArr)
+
   return total
 }
-console.log(diceTotal())
 
+/* if dice total is >= 11 it's big
+   if dice total is < 11 it's small  */
+
+function compare() {
+  console.log(total)
+  if (gameChoice == 'big') {
+    if (total >= 11) {
+      console.log('win')
+    } else {
+      console.log('lose')
+    }
+  } else if (gameChoice == 'small') {
+    if (total < 11) {
+      console.log('win')
+    } else {
+      console.log('lose')
+    }
+  }
+  gameChoice = ''
+}
 const placeBet = function (event) {
   bet = event.target
   diceTotals.innerText = diceTotal()
+  compare()
+}
+
+const placeBig = function (event) {
+  // betBig = event.target
+  gameChoice = 'big'
+  console.log(gameChoice)
+}
+
+const placeSmall = function (event) {
+  // betSmall = event.target
+  gameChoice = 'small'
+  console.log(gameChoice)
 }
 
 betBtn.addEventListener('click', placeBet)
+big.addEventListener('click', placeBig)
+small.addEventListener('click', placeSmall)
