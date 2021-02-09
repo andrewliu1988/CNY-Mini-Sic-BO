@@ -18,6 +18,7 @@ function rollDie(min, max) {
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min) + min)
 }
+
 let diceArr = []
 
 function rollingDice() {
@@ -83,6 +84,8 @@ const placeBet = (event) => {
     gameMessage.innerText = 'Please enter bet amount'
   } else if (gameChoice == '') {
     gameMessage.innerHTML = 'Please choose what to bet on'
+  } else if (bank <= 0) {
+    gameMessage.innerText = 'Player has gone bankrupt!!!'
   } else {
     diceArr = []
     rollingDice()
