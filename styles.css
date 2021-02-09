@@ -9,6 +9,7 @@ body {
   /* background-color: #cc232a; */
   background-size: cover;
   text-align: center;
+  cursor: url(cow-face-samsung.png), auto;
 }
 
 .top {
@@ -97,7 +98,7 @@ body {
 
 .betBtn {
   width: 150px;
-  height: 30px;
+  height: 50px;
   text-align: center;
   margin-top: 20px;
 }
@@ -141,4 +142,12 @@ img {
 .betBtn:hover,
 .threeOfAKind:hover {
   background-color: #ecc926;
+}
+
+.startBtn {
+  margin: 0 auto;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
 }
