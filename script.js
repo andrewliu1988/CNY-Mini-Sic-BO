@@ -38,9 +38,6 @@ function diceTotal() {
   return diceSum
 }
 
-/* if dice total is >= 11 it's big
-   if dice total is < 11 it's small  */
-
 function compare() {
   gameMessage.innerText = ''
   console.log(diceSum)
@@ -89,21 +86,21 @@ const placeBet = function (event) {
 }
 
 const winMoney = (add) => {
-  moneyDisplay.innerText = winOrLose
+  moneyDisplay.innerHTML = winOrLose
   let addMoney = betAmount.value
   winOrLose += parseInt(addMoney)
   updateMoneyDisplay()
 }
 
 const loseMoney = (minus) => {
-  moneyDisplay.innerText = winOrLose
+  moneyDisplay.innerHTML = winOrLose
   let minusMoney = betAmount.value
   winOrLose -= parseInt(minusMoney)
   updateMoneyDisplay()
 }
 
 function updateMoneyDisplay() {
-  moneyDisplay.innerText = parseInt(winOrLose)
+  moneyDisplay.innerHTML = parseInt(winOrLose)
 }
 
 const placeBig = function (event) {
