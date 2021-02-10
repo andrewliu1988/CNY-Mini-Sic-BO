@@ -8,6 +8,7 @@ let betAmount = document.querySelector('#betAmount')
 const betBtn = document.querySelector('.betBtn')
 let gameMessage = document.querySelector('.gameMessage')
 let moneyDisplay = document.querySelector('.moneyDisplay')
+let randomThreeOfAKind = document.querySelector('.randomToak')
 let gameChoice = ''
 let bank = 500
 let diceArr = []
@@ -123,7 +124,7 @@ const placeSmall = () => {
   console.log(gameChoice)
 }
 
-const placeThreeOfAKind = () => {
+const betRandom = () => {
   gameChoice = 'threeOfAKind'
   console.log(gameChoice)
 }
@@ -131,8 +132,10 @@ const placeThreeOfAKind = () => {
 betBtn.addEventListener('click', placeBet)
 big.addEventListener('click', placeBig)
 small.addEventListener('click', placeSmall)
-document
-  .querySelectorAll('.threeOfAKind')
-  .forEach((threeOfAKind) =>
-    threeOfAKind.addEventListener('click', placeThreeOfAKind)
-  )
+randomThreeOfAKind.addEventListener('click', betRandom)
+
+// document
+//   .querySelectorAll('.threeOfAKind')
+//   .forEach((threeOfAKind) =>
+//     threeOfAKind.addEventListener('click', placeThreeOfAKind)
+//   )
