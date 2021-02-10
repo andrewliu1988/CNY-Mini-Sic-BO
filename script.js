@@ -19,7 +19,7 @@ const rollDie = () => {
 }
 
 const rollingDice = () => {
-  diceOne.innerText = ''
+  diceOne.src = '/Users/andrewliu/generalassembly/unit1/dice/images/die 1.png'
   diceTwo.innerText = ''
   diceThree.innerText = ''
   diceArr.push(rollDie())

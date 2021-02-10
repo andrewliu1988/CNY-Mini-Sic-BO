@@ -4,11 +4,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'ZCOOL XiaoWei', serif;
   /* background: url(./images/iloilo-city-china-macro-store-future-time-chinese-download-png-chinese-png-1250_550.png); */
   /* background-repeat: repeat;
   background-size: auto; */
   /* background-color: #ff7c1f; */
-
   background-color: #d71c15;
   /* background-color: #cc232a; */
   background-size: cover;
@@ -35,9 +35,7 @@ body {
 .dice {
   display: flex;
   flex-direction: column;
-  /* border: 2px solid black; */
   padding: 10px 10px 10px 10px;
-
   width: 50px;
   height: 50px;
 }
@@ -83,8 +81,6 @@ body {
 .big {
   width: 250px;
   height: 125px;
-  /* padding: 5px 10px 5px 10px;
-  border: 2px solid #ff7c1f; */
   margin-right: 40px;
   text-align: center;
 }
@@ -112,8 +108,6 @@ body {
 .small {
   width: 250px;
   height: 125px;
-  /* padding: 20px; */
-  /* border: 2px solid black; */
   margin-left: 40px;
   text-align: center;
 }
@@ -137,6 +131,7 @@ img {
   font-weight: bold;
   font-size: 1rem;
   cursor: url(./images/cow-face-samsung.png), auto;
+  font-family: 'ZCOOL XiaoWei', serif;
 }
 
 .big:hover,
