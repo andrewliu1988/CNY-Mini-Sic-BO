@@ -41,7 +41,12 @@ function compare() {
   gameMessage.innerText = ''
   console.log(diceSum)
   if (gameChoice === 'big') {
-    if (diceSum >= 11 && diceSum <= 17) {
+    if (
+      diceSum >= 11 &&
+      diceSum <= 17 &&
+      diceArr[0] !== diceArr[1] &&
+      diceArr[1] !== diceArr[2]
+    ) {
       gameMessage.innerText = 'Win'
       winMoney()
     } else {
@@ -49,7 +54,12 @@ function compare() {
       loseMoney()
     }
   } else if (gameChoice === 'small') {
-    if (diceSum < 11 && diceSum >= 4) {
+    if (
+      diceSum < 11 &&
+      diceSum >= 4 &&
+      diceArr[0] !== diceArr[1] &&
+      diceArr[1] !== diceArr[2]
+    ) {
       gameMessage.innerText = 'Win'
       winMoney()
     } else {
@@ -59,18 +69,11 @@ function compare() {
   } else if (gameChoice === 'threeOfAKind') {
     if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
       gameMessage.innerText = 'Win'
-      console.log('win')
-      console.log(diceArr)
-      return
+      winMoney()
     } else {
       gameMessage.innerText = 'Lose'
-      console.log('lose')
-      return
+      loseMoney()
     }
-  } else {
-    gameMessage.innerText = 'Lose'
-    console.log('lose')
-    return
   }
   gameChoice = ''
 }
