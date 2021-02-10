@@ -80,7 +80,7 @@ function compare() {
     if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
       if ((tok = diceArr[0])) {
         gameMessage.innerText = 'Win'
-        ToakWinMoney()
+        toakWinMoney()
       } else {
         gameMessage.innerText = 'Lose'
         loseMoney()
@@ -105,6 +105,7 @@ const placeBet = (event) => {
     gameMessage.innerText = 'Not enough money in the bank'
   } else {
     diceArr = []
+    // diceArr = [5, 5, 1]
     rollingDice()
     diceResult.innerText = ''
     diceResult.innerText = diceTotal()
