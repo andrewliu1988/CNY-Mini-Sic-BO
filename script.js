@@ -14,21 +14,19 @@ let bank = 500
 let diceArr = []
 let tok = 0
 
-function rollDie(min, max) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min) + min)
+function rollDie() {
+  return Math.floor(Math.random() * 6) + 1
 }
 
 function rollingDice() {
   diceOne.innerText = ''
   diceTwo.innerText = ''
   diceThree.innerText = ''
-  diceArr.push(rollDie(1, 7))
+  diceArr.push(rollDie())
   diceOne.innerText = diceArr[0]
-  diceArr.push(rollDie(1, 7))
+  diceArr.push(rollDie())
   diceTwo.innerText = diceArr[1]
-  diceArr.push(rollDie(1, 7))
+  diceArr.push(rollDie())
   diceThree.innerText = diceArr[2]
   return diceArr
 }
