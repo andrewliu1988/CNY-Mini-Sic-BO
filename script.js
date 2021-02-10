@@ -24,10 +24,12 @@ const rollingDice = () => {
   diceThree.innerText = ''
   diceArr.push(rollDie())
   diceOne.innerText = diceArr[0]
+  // diceOne.src = `./images/die ${rollDie}.png`
   diceArr.push(rollDie())
   diceTwo.innerText = diceArr[1]
   diceArr.push(rollDie())
   diceThree.innerText = diceArr[2]
+
   return diceArr
 }
 
@@ -41,30 +43,28 @@ const diceTotal = () => {
 const compare = () => {
   gameMessage.innerText = ''
   if (gameChoice === 'big') {
-    if (
-      diceSum >= 11 &&
-      diceSum <= 17 &&
-      diceArr[0] !== diceArr[1] &&
-      diceArr[1] !== diceArr[2]
-    ) {
-      gameMessage.innerText = 'Win'
-      winMoney()
-    } else {
+    if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
       gameMessage.innerText = 'Lose'
-      loseMoney()
+    } else {
+      if (diceSum >= 11 && diceSum <= 17) {
+        gameMessage.innerText = 'Win'
+        winMoney()
+      } else {
+        gameMessage.innerText = 'Lose'
+        loseMoney()
+      }
     }
   } else if (gameChoice === 'small') {
-    if (
-      diceSum < 11 &&
-      diceSum >= 4 &&
-      diceArr[0] !== diceArr[1] &&
-      diceArr[1] !== diceArr[2]
-    ) {
-      gameMessage.innerText = 'Win'
-      winMoney()
-    } else {
+    if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
       gameMessage.innerText = 'Lose'
-      loseMoney()
+    } else {
+      if (diceSum < 11 && diceSum >= 4) {
+        gameMessage.innerText = 'Win'
+        winMoney()
+      } else {
+        gameMessage.innerText = 'Lose'
+        loseMoney()
+      }
     }
   } else if (gameChoice === 'randomThreeOfAKind') {
     if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
@@ -83,11 +83,10 @@ const compare = () => {
         gameMessage.innerText = 'Lose'
         loseMoney()
       }
+    } else {
+      gameMessage.innerText = 'Lose'
+      loseMoney()
     }
-    // else {
-    //   gameMessage.innerText = 'Lose'
-    //   loseMoney()
-    // }
   }
   gameChoice = ''
 }
@@ -104,7 +103,7 @@ const placeBet = (event) => {
     gameMessage.innerText = 'Not enough money in the bank'
   } else {
     diceArr = []
-    // diceArr = [5, 5, 1]
+    // diceArr = [4, 5, 5)
     rollingDice()
     diceResult.innerText = ''
     diceResult.innerText = diceTotal()
@@ -127,7 +126,7 @@ const randomToakWinMoney = () => {
   moneyDisplay.innerText = `$${parseInt(bank)}`
 }
 
-const ToakWinMoney = () => {
+const toakWinMoney = () => {
   bank += parseInt(betAmount.value) * 150
   moneyDisplay.innerText = `$${parseInt(bank)}`
 }
@@ -147,6 +146,8 @@ const betRandom = () => {
 const assignTokOne = () => {
   gameChoice = 'threeOfAKind'
   tok = 1
+  console.log(diceArr)
+  console.log(tok)
 }
 
 const assignTokTwo = () => {
