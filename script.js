@@ -14,11 +14,11 @@ let bank = 500
 let diceArr = []
 let tok = 0
 
-function rollDie() {
+const rollDie = () => {
   return Math.floor(Math.random() * 6) + 1
 }
 
-function rollingDice() {
+const rollingDice = () => {
   diceOne.innerText = ''
   diceTwo.innerText = ''
   diceThree.innerText = ''
@@ -31,14 +31,14 @@ function rollingDice() {
   return diceArr
 }
 
-function diceTotal() {
+const diceTotal = () => {
   diceSum = diceArr.reduce((acc, value) => {
     return acc + value
   }, 0)
   return diceSum
 }
 
-function compare() {
+const compare = () => {
   gameMessage.innerText = ''
   if (gameChoice === 'big') {
     if (
@@ -83,10 +83,11 @@ function compare() {
         gameMessage.innerText = 'Lose'
         loseMoney()
       }
-    } else {
-      gameMessage.innerText = 'Lose'
-      loseMoney()
     }
+    // else {
+    //   gameMessage.innerText = 'Lose'
+    //   loseMoney()
+    // }
   }
   gameChoice = ''
 }
