@@ -42,7 +42,6 @@ function diceTotal() {
 
 function compare() {
   gameMessage.innerText = ''
-  console.log(diceSum)
   if (gameChoice === 'big') {
     if (
       diceSum >= 11 &&
@@ -125,71 +124,54 @@ const loseMoney = () => {
 
 const randomToakWinMoney = () => {
   bank += parseInt(betAmount.value) * 30
-  console.log(bank)
   moneyDisplay.innerText = `$${parseInt(bank)}`
 }
 
 const ToakWinMoney = () => {
   bank += parseInt(betAmount.value) * 150
-  console.log(bank)
   moneyDisplay.innerText = `$${parseInt(bank)}`
 }
 
 const placeBig = () => {
   gameChoice = 'big'
-  console.log(gameChoice)
 }
 
 const placeSmall = () => {
   gameChoice = 'small'
-  console.log(gameChoice)
 }
 
 const betRandom = () => {
   gameChoice = 'randomThreeOfAKind'
-  console.log(gameChoice)
 }
 
 const assignTokOne = () => {
   gameChoice = 'threeOfAKind'
   tok = 1
-  console.log(tok)
-  console.log(gameChoice)
 }
 
 const assignTokTwo = () => {
   gameChoice = 'threeOfAKind'
   tok = 2
-  console.log(tok)
-  console.log(gameChoice)
 }
 
 const assignTokThree = () => {
   gameChoice = 'threeOfAKind'
   tok = 3
-  console.log(tok)
-  console.log(gameChoice)
 }
 
 const assignTokFour = () => {
   gameChoice = 'threeOfAKind'
   tok = 4
-  console.log(tok)
-  console.log(gameChoice)
 }
 
 const assignTokFive = () => {
   gameChoice = 'threeOfAKind'
   tok = 5
-  console.log(tok)
-  console.log(gameChoice)
 }
 
 const assignTokSix = () => {
   gameChoice = 'threeOfAKind'
   tok = 6
-  console.log(tok)
-  console.log(gameChoice)
 }
 
 betBtn.addEventListener('click', placeBet)
