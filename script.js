@@ -86,6 +86,8 @@ const placeBet = (event) => {
     gameMessage.innerHTML = 'Please choose what to bet on'
   } else if (bank <= 0) {
     gameMessage.innerText = 'Player has gone bankrupt!!!'
+  } else if (betAmount.value > bank) {
+    gameMessage.innerText = 'Not enough money in the bank'
   } else {
     diceArr = []
     rollingDice()
