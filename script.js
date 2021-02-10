@@ -32,6 +32,7 @@ function rollingDice() {
   diceThree.innerText = diceArr[2]
   return diceArr
 }
+
 function diceTotal() {
   diceSum = diceArr.reduce((acc, value) => {
     return acc + value
@@ -79,12 +80,15 @@ function compare() {
   } else if (gameChoice === 'threeOfAKind') {
     if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
       if ((tok = diceArr[0])) {
-        console.log('win')
+        gameMessage.innerText = 'Win'
+        ToakWinMoney()
       } else {
-        console.log('lose')
+        gameMessage.innerText = 'Lose'
+        loseMoney()
       }
     } else {
-      console.log('lose')
+      gameMessage.innerText = 'Lose'
+      loseMoney()
     }
   }
   gameChoice = ''
@@ -152,54 +156,49 @@ const assignTokOne = () => {
   console.log(tok)
   console.log(gameChoice)
 }
+
+const assignTokTwo = () => {
+  gameChoice = 'threeOfAKind'
+  tok = 2
+  console.log(tok)
+  console.log(gameChoice)
+}
+
+const assignTokThree = () => {
+  gameChoice = 'threeOfAKind'
+  tok = 3
+  console.log(tok)
+  console.log(gameChoice)
+}
+
+const assignTokFour = () => {
+  gameChoice = 'threeOfAKind'
+  tok = 4
+  console.log(tok)
+  console.log(gameChoice)
+}
+
+const assignTokFive = () => {
+  gameChoice = 'threeOfAKind'
+  tok = 5
+  console.log(tok)
+  console.log(gameChoice)
+}
+
+const assignTokSix = () => {
+  gameChoice = 'threeOfAKind'
+  tok = 6
+  console.log(tok)
+  console.log(gameChoice)
+}
+
 betBtn.addEventListener('click', placeBet)
 big.addEventListener('click', placeBig)
 small.addEventListener('click', placeSmall)
 randomThreeOfAKind.addEventListener('click', betRandom)
 document.querySelector('.threeOne').addEventListener('click', assignTokOne)
-document.querySelector('.threeTwo').addEventListener('click', assignTokOne)
-document.querySelector('.threeThree').addEventListener('click', assignTokOne)
-document.querySelector('.threeFour').addEventListener('click', assignTokOne)
-document.querySelector('.threeFive').addEventListener('click', assignTokOne)
-document.querySelector('.threeSix').addEventListener('click', assignTokOne)
-
-// document
-//   .querySelectorAll('.threeOfAKind')
-//   .forEach((threeOfAKind) =>
-//     threeOfAKind.addEventListener('click', placeThreeOfAKind)
-//   )
-
-// switch () {
-//   case diceArr [0] === 1 && diceArr [1] === 1 && diceArr[2] === 1:
-//     gameMessage.innerText = 'Win'
-//     toakWinMoney()
-//   break;
-//   case diceArr [0] === 2 && diceArr [1] === 2 && diceArr[2] === 2:
-//     gameMessage.innerText = 'Win'
-//     toakWinMoney()
-//   break;
-
-//   case diceArr [0] === 3 && diceArr [1] === 3 && diceArr[2] === 3:
-//     gameMessage.innerText = 'Win'
-//     toakWinMoney()
-//   break;
-
-//   case diceArr [0] === 4 && diceArr [1] === 4 && diceArr[2] === 4:
-//     gameMessage.innerText = 'Win'
-//     toakWinMoney()
-//   break;
-
-//   case diceArr [0] === 5 && diceArr [1] === 5 && diceArr[2] === 5:
-//     gameMessage.innerText = 'Win'
-//     toakWinMoney()
-//   break;
-
-//   case diceArr [0] === 6 && diceArr [1] === 6 && diceArr[2] === 6:
-//     gameMessage.innerText = 'Win'
-//     toakWinMoney()
-//   break;
-//   default:
-//   gameMessage.innerText = 'Lose'
-//   loseMoney()
-
-// }
+document.querySelector('.threeTwo').addEventListener('click', assignTokTwo)
+document.querySelector('.threeThree').addEventListener('click', assignTokThree)
+document.querySelector('.threeFour').addEventListener('click', assignTokFour)
+document.querySelector('.threeFive').addEventListener('click', assignTokFive)
+document.querySelector('.threeSix').addEventListener('click', assignTokSix)
