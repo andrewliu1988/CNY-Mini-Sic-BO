@@ -69,7 +69,7 @@ function compare() {
   } else if (gameChoice === 'threeOfAKind') {
     if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
       gameMessage.innerText = 'Win'
-      winMoney()
+      toakWinMoney()
     } else {
       gameMessage.innerText = 'Lose'
       loseMoney()
@@ -102,6 +102,12 @@ const winMoney = () => {
 
 const loseMoney = () => {
   bank -= parseInt(betAmount.value)
+  moneyDisplay.innerText = `$${parseInt(bank)}`
+}
+
+const toakWinMoney = () => {
+  bank += parseInt(betAmount.value) * 30
+  console.log(bank)
   moneyDisplay.innerText = `$${parseInt(bank)}`
 }
 
