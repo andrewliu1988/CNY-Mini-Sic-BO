@@ -74,8 +74,9 @@ const compare = () => {
       loseMoney()
     }
   } else if (gameChoice === 'threeOfAKind') {
+    console.log(diceArr)
     if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
-      if ((tok = diceArr[0])) {
+      if (tok === diceArr[0]) {
         gameMessage.innerText = 'Win'
         toakWinMoney()
       } else {
@@ -102,7 +103,7 @@ const placeBet = (event) => {
     gameMessage.innerText = 'Not enough money in the bank'
   } else {
     diceArr = []
-    // diceArr = [4, 5, 5)
+    // diceArr = [5, 5, 5]
     rollingDice()
     diceResult.innerText = ''
     diceResult.innerText = diceTotal()
