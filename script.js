@@ -51,8 +51,9 @@ const compare = () => {
   } else if (gameChoice === 'small') {
     if (diceArr[0] === diceArr[1] && diceArr[1] === diceArr[2]) {
       gameMessage.innerText = 'Lose'
+      loseMoney()
     } else {
-      if (diceSum < 11 && diceSum >= 4) {
+      if (diceSum >= 4 && diceSum < 11) {
         gameMessage.innerText = 'Win'
         winMoney()
       } else {
@@ -89,7 +90,7 @@ const placeBet = (event) => {
   bet = event.target
   if (betAmount.value == 0) {
     gameMessage.innerText = 'Please enter bet amount'
-  } else if (gameChoice == '') {
+  } else if (gameChoice === '') {
     gameMessage.innerHTML = 'Please choose what to bet on'
   } else if (bank <= 0) {
     gameMessage.innerText = 'Player has gone bankrupt!!!'
@@ -167,7 +168,7 @@ const assignTokSix = () => {
 }
 
 document.querySelector('.betBtn').addEventListener('click', placeBet)
-document.querySelector('.big'), addEventListener('click', placeBig)
+document.querySelector('.big').addEventListener('click', placeBig)
 document.querySelector('.small').addEventListener('click', placeSmall)
 document.querySelector('.randomToak').addEventListener('click', betRandom)
 document.querySelector('.threeOne').addEventListener('click', assignTokOne)

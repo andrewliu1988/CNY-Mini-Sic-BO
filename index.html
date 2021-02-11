@@ -8,16 +8,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@100&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-  <title>Dice Roll</title>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+  <title>CNY Mini Sic Bo</title>
 </head>
+
+
 <header>
-<h1>CNY Mini Sic Bo</h1>
+
+<h1 class="gameName">CNY Mini Sic Bo</h1>
 </header>
+
 <body>
   <section class ="side-bar">
-    <h1 class="banner">恭喜發財</h1>
-    <section class ="top">
+    <h1 class="banner animate__animated animate__backInLeft">恭喜發財</h1>
+    <section class ="top animate__animated animate__zoomInDown">
     
       <img class = "dice one"id = "dieOne"></img>
       <img class = "dice two" id = "dieTwo"></img>
@@ -25,38 +30,38 @@
       <div class = "dice result" id = "total"></div>
       
     </section>
-    <h1 class="banner-one">新年快樂</h1>
+    <h1 class="banner-one animate__animated animate__backInRight">新年快樂</h1>
 </section>
-  <h2 class ="gameMessage">Place Your Bet</h2>
-  <h2 class= "moneyDisplay">Bank: $500</h2>
+  <h1 class ="gameMessage animate__animated animate__flash animate__infinite">Place Your Bet</h1>
+  <h1 class= "moneyDisplay">Bank: $500</h1>
 
 
   <section class ="mid">
-    <button class = "big">Big 
+    <button class = "big animate__animated animate__lightSpeedInLeft">BIG
       <p>Are Numbers 11 to 17</p>
       <p>1 wins 1</p>
       <p>Lose if any triple</p>
     </button>
-      <section class ='btnArea'>
-        <input type="number" id="betAmount" placeholder="Bet Amount" pattern="$">
-        <button class = betBtn>Place Bet</button>
+      <section class ="btnArea">
+        <input type="number" id="betAmount" placeholder="Bet Amount $" pattern="$">
+        <button class = "betBtn">Place Bet</button>
       </section>
-    <button class = "small">Small
+    <button class = "small animate__animated animate__lightSpeedInRight">SMALL
       <p>Are Numbers 4 to 10</p>
       <p>1 wins 1</p>
       <p>Lose if any triple</p>
     </button>
   </section>
-    <h2>Get Rich! Payout 1:30</h1>
-      <secton class ="randomThreeOfAKind">
+    <h2>Get Rich! Payout 1:30</h2>
+      <secton class ="randomThreeOfAKind animate__animated animate__bounceInUp">
         <button class=randomToak>
           <img src ="./images/random die.png" alt = "random die">
           <img src ="./images/random die.png" alt = "random die">
           <img src ="./images/random die.png" alt = "random die">  
         </button>
     </secton>
-    <h2>Go Big or Go Home! Payout 1:150</h1>
-<section class ="bottom">
+    <h2>Go Big or Go Home! Payout 1:150</h2>
+<section class ="bottom animate__animated animate__bounceInUp">
   <button class ="threeOne threeOfAKind">
     <img src="./images/die1.png" alt="die one">
     <img src="./images/die1.png" alt="die one">
