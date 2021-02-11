@@ -5,13 +5,13 @@ body {
   flex-direction: column;
   justify-content: center;
   font-family: 'ZCOOL XiaoWei', serif;
-  /* background: url(./images/chinese-new-year-2021-design-with-golden-ox-vector.png);
+  background: url(./images/iloilo-city-china-macro-store-future-time-chinese-download-png-chinese-png-1250_550.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; */
+  background-position: center center;
   /* background-color: #ff7c1f; */
-  background-color: #d71c15;
-  /* background-color: #cc232a; */
+  /* background-color: #d71c15; */
+  background-color: #cc232a;
   background-size: cover;
   text-align: center;
   cursor: url(./images/cow-face-samsung.png), auto;
@@ -27,13 +27,11 @@ body {
 .homepage-mid {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 .side-bar {
-  width: 200px;
-  height: 500px;
   margin: 0 auto;
 }
 
@@ -41,9 +39,28 @@ body {
   margin: 100px 50px 100px 50px;
   border: 2px solid black;
   height: 500px;
-  width: 600px;
+  width: 650px;
+  background-color: #f5ac27;
+  padding: 20px 40px 20px 40px;
 }
-.homepage-side {
-  width: 200px;
-  height: 400px;
+
+p,
+.ul {
+  font-size: 1.3rem;
 }
+.homepage-side-left {
+  width: 300px;
+  height: 500px;
+}
+.homepage-side-right {
+  width: 300px;
+  height: 500px;
+}
+/* 
+footer {
+  display: flex;
+  background: url(./images/iloilo-city-china-macro-store-future-time-chinese-download-png-chinese-png-1250_550.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+} */
