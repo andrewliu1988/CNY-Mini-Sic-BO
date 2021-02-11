@@ -2,6 +2,9 @@ header {
   height: 100px;
   text-transform: uppercase;
   text-shadow: 2px 5px 5px #ecc926;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'ZCOOL XiaoWei', serif;
 }
 
 body {
@@ -10,13 +13,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'ZCOOL XiaoWei', serif;
+  /* font-family: 'ZCOOL XiaoWei', serif; */
   background: url(./images/iloilo-city-china-macro-store-future-time-chinese-download-png-chinese-png-1250_550.png);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center center;
+  background-color: #fef8e5;
   /* background-color: #ff7c1f; */
-  background-color: #a3262a;
+  /* background-color: #a3262a; */
   /* background-color: #d71c15; */
   /* background-color: #cc232a; */
   background-size: cover;
@@ -25,15 +29,32 @@ body {
   color: black;
   text-transform: uppercase;
   font-weight: bolder;
+  text-shadow: 2px 5px 5px #ecc926;
 }
 
+.side-bar {
+  display: grid;
+  grid-template-columns: 25%, 50% 25%;
+  grid-template-rows: 1;
+}
+
+.banner {
+  grid-row-start: 1;
+  justify-self: center;
+  font-family: 'ZCOOL QingKe HuangYo' cursive;
+  display: flex;
+  flex-direction: column;
+  background-color: #cc232a;
+  font-size: 3.7rem;
+  width: 100px;
+  height: 350px;
+  text-shadow: 5px 10px 5px #ecc926;
+}
 .top {
+  grid-row-start: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
   border: 20px solid black;
   border-radius: 50%;
   width: 375px;
@@ -42,9 +63,19 @@ body {
   font-size: 2rem;
   font-weight: bolder;
   background-color: #35654d;
-  background-repeat: no-repeat;
-  background-size: 600px 400px;
-  background-position: center center;
+}
+
+.banner-one {
+  grid-row-start: 1;
+  justify-self: center;
+  font-family: 'ZCOOL QingKe HuangYo' cursive;
+  display: flex;
+  flex-direction: column;
+  background-color: #cc232a;
+  font-size: 3.7rem;
+  width: 100px;
+  height: 350px;
+  text-shadow: 5px 10px 5px #ecc926;
 }
 
 .dice {
@@ -80,9 +111,11 @@ body {
 }
 
 #total {
+  font-size: 3rem;
   grid-column-start: 2;
   grid-row-start: 3;
   justify-self: center;
+  align-self: center;
 }
 
 .mid {
