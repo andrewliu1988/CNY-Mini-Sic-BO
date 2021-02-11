@@ -3,7 +3,7 @@ header {
   background-color: #f5ac27;
   background-image: url(./images/Chinese-New-Year-Decoration-PNG-HD-Image.png);
   background-position: center center;
-  background-size: 300px 400px;
+  background-size: 1800px 400px;
   background-repeat: no-repeat;
 }
 
@@ -51,6 +51,7 @@ body {
   width: 650px;
   background-color: #f5ac27;
   padding: 20px 40px 20px 40px;
+  text-indent: 5;
 }
 
 p,

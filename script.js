@@ -106,22 +106,22 @@ const placeBet = (event) => {
 
 const winMoney = () => {
   bank += parseInt(betAmount.value)
-  moneyDisplay.innerText = `$${parseInt(bank)}`
+  moneyDisplay.innerText = `Bank: $${parseInt(bank)}`
 }
 
 const loseMoney = () => {
   bank -= parseInt(betAmount.value)
-  moneyDisplay.innerText = `$${parseInt(bank)}`
+  moneyDisplay.innerText = `Bank: $${parseInt(bank)}`
 }
 
 const randomToakWinMoney = () => {
   bank += parseInt(betAmount.value) * 30
-  moneyDisplay.innerText = `$${parseInt(bank)}`
+  moneyDisplay.innerText = `Bank: $${parseInt(bank)}`
 }
 
 const toakWinMoney = () => {
   bank += parseInt(betAmount.value) * 150
-  moneyDisplay.innerText = `$${parseInt(bank)}`
+  moneyDisplay.innerText = `Bank: $${parseInt(bank)}`
 }
 
 const placeBig = () => {
