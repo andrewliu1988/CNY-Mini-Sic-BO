@@ -167,6 +167,10 @@ const assignTokSix = () => {
   tok = 6
 }
 
+const reloadPage = (event) => {
+  location.reload()
+}
+
 document.querySelector('.betBtn').addEventListener('click', placeBet)
 document.querySelector('.big').addEventListener('click', placeBig)
 document.querySelector('.small').addEventListener('click', placeSmall)
@@ -177,3 +181,4 @@ document.querySelector('.threeThree').addEventListener('click', assignTokThree)
 document.querySelector('.threeFour').addEventListener('click', assignTokFour)
 document.querySelector('.threeFive').addEventListener('click', assignTokFive)
 document.querySelector('.threeSix').addEventListener('click', assignTokSix)
+document.querySelector('.reset').addEventListener('click', reloadPage)
