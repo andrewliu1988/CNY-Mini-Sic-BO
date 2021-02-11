@@ -27,7 +27,11 @@ body {
   color: black;
   text-transform: uppercase;
   font-weight: bolder;
-  text-shadow: 2px 5px 5px #ecc926;
+  text-shadow: 2px 1px 1px black;
+}
+
+h2 {
+  text-shadow: 2px 5px 10px #ecc926;
 }
 
 .side-bar {
