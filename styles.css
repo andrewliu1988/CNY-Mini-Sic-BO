@@ -9,12 +9,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; */
-  /* background-color: #ff7c1f; */
-  background-color: #d71c15;
+  background-color: #ff7c1f;
+  /* background-color: #d71c15; */
   /* background-color: #cc232a; */
   background-size: cover;
   text-align: center;
   cursor: url(./images/cow-face-samsung.png), auto;
+  color: #ecc926;
 }
 
 .top {

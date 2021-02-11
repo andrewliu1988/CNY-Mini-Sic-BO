@@ -1,6 +1,7 @@
-let diceOne = document.querySelector('.one')
-let diceTwo = document.querySelector('.two')
-let diceThree = document.querySelector('.three')
+let diceOne = document.querySelector('#dieOne')
+
+let diceTwo = document.querySelector('#dieTwo')
+let diceThree = document.querySelector('#dieThree')
 let diceResult = document.querySelector('#total')
 const big = document.querySelector('.big')
 const small = document.querySelector('.small')
@@ -13,23 +14,21 @@ let gameChoice = ''
 let bank = 500
 let diceArr = []
 let tok = 0
+diceOne.src = './images/die1.png'
+diceTwo.src = './images/die1.png'
+diceThree.src = './images/die1.png'
 
 const rollDie = () => {
   return Math.floor(Math.random() * 6) + 1
 }
 
 const rollingDice = () => {
-  diceOne.src = '/Users/andrewliu/generalassembly/unit1/dice/images/die 1.png'
-  diceTwo.innerText = ''
-  diceThree.innerText = ''
   diceArr.push(rollDie())
-  diceOne.innerText = diceArr[0]
-  // diceOne.src = `./images/die ${rollDie}.png`
+  diceOne.src = `./images/die${diceArr[0]}.png`
   diceArr.push(rollDie())
-  diceTwo.innerText = diceArr[1]
+  diceTwo.src = `./images/die${diceArr[1]}.png`
   diceArr.push(rollDie())
-  diceThree.innerText = diceArr[2]
-
+  diceThree.src = `./images/die${diceArr[2]}.png`
   return diceArr
 }
 
