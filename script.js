@@ -1,3 +1,5 @@
+// Global Variables Here
+
 let diceOne = document.querySelector('#dieOne')
 let diceTwo = document.querySelector('#dieTwo')
 let diceThree = document.querySelector('#dieThree')
@@ -12,6 +14,9 @@ let tok = 0
 diceOne.src = './images/die1.png'
 diceTwo.src = './images/die2.png'
 diceThree.src = './images/die3.png'
+
+////////////////////////////////
+// Functions For Game Logic Here
 
 const rollDie = () => {
   return Math.floor(Math.random() * 6) + 1
@@ -170,6 +175,9 @@ const assignTokSix = () => {
 const reloadPage = (event) => {
   location.reload()
 }
+
+////////////////////////////////
+// Event Listeners Here
 
 document.querySelector('.betBtn').addEventListener('click', placeBet)
 document.querySelector('.big').addEventListener('click', placeBig)
