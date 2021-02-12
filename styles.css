@@ -238,13 +238,3 @@ img {
 .reset:hover {
   background-color: #ecc926;
 }
-
-footer {
-  width: auto;
-  height: auto;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  margin: 0 auto;
-  text-shadow: 0 0 0;
-}
