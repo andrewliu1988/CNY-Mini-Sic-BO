@@ -1,9 +1,9 @@
-# Dice-Roll 
+# CNY Mini Sic Bo
 
-## Date: 2/7/2021 
+## Date: 2/12/2021 
 
 ### By: Andrew Liu 
-#### [Trello](https://trello.com/b/ldaqHj36/dice-roll)
+#### [Trello](https://trello.com/b/ldaqHj36/cny-mini-sic-bo)
 ***
 
 ### **Description**
