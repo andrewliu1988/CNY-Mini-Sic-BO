@@ -88,7 +88,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  border: 15px solid black;
+  border: 20px solid black;
   border-radius: 50%;
   width: 375px;
   height: 375px;
