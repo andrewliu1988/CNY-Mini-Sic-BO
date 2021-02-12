@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@100&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+  <title>CNY Mini Sic Bo</title>
+</head>
+
+
+<header>
+
+<h1 class="gameName animate__animated animate__zoomIn">CNY Mini Sic Bo</h1>
+
+</header>
+
+<nav> 
+  <button class="reset">PLAY AGAIN</button>
+  <ul>
+    <li class = "homepage"><a href="index.html">Homepage</a></li>
+  </ul>
+</nav>
+
+<body>
+  <section class ="side-bar">
+    <h1 class="banner animate__animated animate__zoomIn">恭喜發財</h1>
+    <section class ="top">
+    
+      <img class = "dice one animate__animated animate__zoomIn"id = "dieOne"></img>
+      <img class = "dice two animate__animated animate__zoomIn" id = "dieTwo"></img>
+      <img class = "dice three animate__animated animate__zoomIn" id = "dieThree"></img>
+      <div class = "dice result" id = "total"></div>
+      
+    </section>
+    <h1 class="banner-one animate__animated animate__zoomIn">新年快樂</h1>
+</section>
+  <h1 class ="gameMessage animate__animated animate__flash animate__repeat-2">Place Your Bet</h1>
+  <h1 class= "moneyDisplay">Bank: $500</h1>
+
+  <section class ="mid">
+    <button class = "big animate__animated animate__lightSpeedInLeft">BIG
+      <p>Are Numbers 11 to 17</p>
+      <p>1 wins 1</p>
+      <p>Lose if any triple</p>
+    </button>
+      <section class ="btnArea">
+        <input type="number" id="betAmount" placeholder="Bet Amount $" pattern="$">
+        <button class = "betBtn">Place Bet</button>
+      </section>
+    <button class = "small animate__animated animate__lightSpeedInRight">SMALL
+      <p>Are Numbers 4 to 10</p>
+      <p>1 wins 1</p>
+      <p>Lose if any triple</p>
+    </button>
+  </section>
+    <h2>Get Rich! Payout 1:30</h2>
+      <secton class ="randomThreeOfAKind animate__animated animate__zoomIn">
+        <button class=randomToak>
+          <img src ="./images/random die.png" alt = "random die">
+          <img src ="./images/random die.png" alt = "random die">
+          <img src ="./images/random die.png" alt = "random die">  
+        </button>
+    </secton>
+    <h2>Go Big or Go Home! Payout 1:150</h2>
+<section class ="bottom animate__animated animate__zoomIn">
+  <button class ="threeOne threeOfAKind">
+    <img src="./images/die1.png" alt="die one">
+    <img src="./images/die1.png" alt="die one">
+    <img src="./images/die1.png" alt="die one">
+  </button>
+  <button class ="threeTwo threeOfAKind">
+    <img src="./images/die2.png" alt="die two">
+    <img src="./images/die2.png" alt="die two">
+    <img src="./images/die2.png" alt="die two">
+  </button>
+  <button class ="threeThree threeOfAKind ">
+    <img src="./images/die3.png" alt="die three">
+    <img src="./images/die3.png" alt="die three">
+    <img src="./images/die3.png" alt="die three">
+  </button>
+  <button class ="threeFour threeOfAKind">
+    <img src="./images/die4.png" alt="die four">
+    <img src="./images/die4.png" alt="die four">
+    <img src="./images/die4.png" alt="die four">
+  </button>
+  <button class ="threeFive threeOfAKind">
+    <img src="./images/die5.png" alt="die five">
+    <img src="./images/die5.png" alt="die five">
+    <img src="./images/die5.png" alt="die five">
+  </button>
+  <button class ="threeSix threeOfAKind">
+    <img src="./images/die6.png" alt="die six">
+    <img src="./images/die6.png" alt="die six">
+    <img src="./images/die6.png" alt="die six">
+  </button>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
