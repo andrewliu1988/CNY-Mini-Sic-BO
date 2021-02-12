@@ -34,9 +34,10 @@ To get started with this project the first thing I need to do is to create and f
 * **Function for Three of a kind** : creating a function that would compare the dice to 3 of kind for the dice. 3 of a kind are not consider small or big. 
 * **Select Function/Event Listener**: Create function that will allow us to select our big, small, or 3 of a kind
 * **Bet Function** : Main function button that activates random function, compare function, rolling dice function and a else if statement to prevent game from being able to play.
-* **Conditions to meet**: In order to start the game the player has to input a bet amount, then they have to make a selection of either Big, Small, or Specific 3 of a kind.
+* **Conditions to meet**: In order to start the game the player has to input a bet amount, then they have to make a selection of either Big, Small, or Specific 3 of a kind. Cannot input value more then bank. 
+*  **Game Inactive**: Once player bank reach $0, the game will show message of bankrupt and will be allow to bet anymore. 
 * **Create Homepage**: Creating start page that will lead to game page. The start page will also have  the rules to the game. 
-* **Restart**: button to restart the game 
+* **Play Again**: button to reload the page to start the game again. 
 
 ***
 
