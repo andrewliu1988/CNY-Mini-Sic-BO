@@ -18,6 +18,8 @@ CNY Mini Sic Bo game is a simple version of a casino game called Sic Bo. The gam
 
 ![Javascript, HTML, CSS](images/Coding%20Icon.png)
 
+***
+
 
 ### **Getting Started**
 
@@ -34,10 +36,11 @@ The project was deployed using Surge and can be view [here.](http://tasty-fowl.s
 
 ![Starting Concept](./Dice%20Format%20Final%20Diagram.png)
 
+***
 
 #### Final Product
-![Game Homeage](./images/Screen%20Shot%202021-02-11%20at%209.15.15%20PM.png)
-![Game page](images/Screen%20Shot%202021-02-11%20at%209.15.39%20PM.png)
+![Game Homepage](./images/Screen%20Shot%202021-02-12%20at%201.27.26%20PM.png)
+![Game page](images/Screen%20Shot%202021-02-12%20at%201.27.38%20PM.png)
 
 
 ***
@@ -50,6 +53,7 @@ The project was deployed using Surge and can be view [here.](http://tasty-fowl.s
 - [ ] Adding Sound Effect to Dice Roll
 - [ ] Expanding Bet Selections 
 
+***
 
 ### Credits: 
 
