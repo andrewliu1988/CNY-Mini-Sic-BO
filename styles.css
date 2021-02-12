@@ -14,9 +14,8 @@ header {
 nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-shadow: 0 0 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .reset {
@@ -25,17 +24,29 @@ nav {
   font-family: 'ZCOOL XiaoWei', serif;
   font-weight: bolder;
   border-radius: 5%;
+  width: 89.19px;
+  height: 52px;
+  cursor: url(./images/cow-face-samsung.png), auto;
 }
 
 .homepage {
   list-style-type: none;
   text-decoration: none;
+  text-align: center;
+  background-color: #ff7c1f;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-weight: bolder;
+  border-radius: 5%;
+  width: 89.19px;
+  height: 52px;
+  cursor: url(./images/cow-face-samsung.png), auto;
 }
 
 a {
   text-decoration: none;
   display: block;
-  color: #cc232a;
+  color: black;
+  cursor: url(./images/cow-face-samsung.png), auto;
 }
 
 body {
@@ -235,6 +246,7 @@ img {
 .betBtn:hover,
 .threeOfAKind:hover,
 .randomToak:hover,
-.reset:hover {
+.reset:hover,
+.homepage:hover {
   background-color: #ecc926;
 }
