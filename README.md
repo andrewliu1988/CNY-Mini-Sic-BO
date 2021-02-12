@@ -10,7 +10,7 @@
 
 ### **Description**
 
-CNY Mini Sic Bo game is a simple take on of a casino game called Sic Bo. The game has 3 dice that will produce a random # for the player to bet against. In this simple version the player only has 9 choices they could place their bet on. The reason I chose this game because Chinese New Year is right around the corner. When I was a kid, I use to play a lot of casino game with my cousins during Chinese New Year because that's when we gather around and celebrate. 
+CNY Mini Sic Bo game is a simple version of a casino game called Sic Bo. The game has 3 dice that will produce a random # for the player to bet against. In this simple version the player only has 9 choices they could place their bet on Big, Small, Three of a kind or any three of kind. The winning output is different for each selection. Good luck and have fun! 
 
 ***
 
