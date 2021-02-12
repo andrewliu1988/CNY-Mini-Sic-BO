@@ -10,8 +10,8 @@ let bank = 500
 let diceArr = []
 let tok = 0
 diceOne.src = './images/die1.png'
-diceTwo.src = './images/die1.png'
-diceThree.src = './images/die1.png'
+diceTwo.src = './images/die2.png'
+diceThree.src = './images/die3.png'
 
 const rollDie = () => {
   return Math.floor(Math.random() * 6) + 1

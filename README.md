@@ -28,28 +28,36 @@ My Dice roll game is a simple take on of a casino game called Sic Bo. The game h
 
 To get started with this project the first thing I need to do is to create and format the HTML page of the game. Creating sections, class and input to know where each and every one of the event listener is going to be. After setting up the HTML I would use simple CSS to setup the game to look like the diagram below and then we are going to move onto the javascript. 
 
-* **Function for Random #: Dice Area** : Create a random function for each dice and the output would be the sum of all 3 dices. Random function value for each dice would be min. 1 and max 6. Sum would be min. 3 and max 18
-* **Function for Big and Small** : Create a function to compare the sum of the dice to big and small 
-* **Function to select**: Create function that will allow us to select our big or small. 
-* **Function to bet** : Allow the bet function to activate the random function of the 3 dice and determine if the player is a winner or loser. 
-* **Turning the game inactive**: Player starts with $500 in the counter and once they lose all their money the game will become inactive and display message that player has lost all their money. 
-* **Create Start Page**: Creating start page that will lead to game page. The start page will have the rules to the game. 
-* **Function for Three of a kind** : creating a function that would compare equal to 3 of kind for the dice. 
+* **Random # function and Reduce Method** : Create a random function for each die and and use the reduce method to determine the sum of the dices. Random function value for each die would be min. 1 and max 6 and the sum would be min. 3 and max 18
+* **Rolling Dice Function**: This is the function that display the 3 random # img onto the game table.  
+* **Function for Big and Small** : Start with creating a function that would be able to compare sum of the 3 dices to big and small. 
+* **Function for Three of a kind** : creating a function that would compare the dice to 3 of kind for the dice. 3 of a kind are not consider small or big. 
+* **Select Function/Event Listener**: Create function that will allow us to select our big, small, or 3 of a kind
+* **Bet Function** : Main function button that activates random function, compare function, rolling dice function and a else if statement to prevent game from being able to play.
+* **Conditions to meet**: In order to start the game the player has to input a bet amount, then they have to make a selection of either Big, Small, or Specific 3 of a kind.
+* **Create Homepage**: Creating start page that will lead to game page. The start page will also have  the rules to the game. 
 * **Restart**: button to restart the game 
 
-
-
-
+***
 
 ### **Screenshots**
 
 #### Game Format
 
-![Game format](./Dice%20Format%20Final%20Diagram.png)
+![Starting Concept](./Dice%20Format%20Final%20Diagram.png)
 ![Game Homeage](./images/Screen%20Shot%202021-02-11%20at%209.15.15%20PM.png)
 ![Game page](images/Screen%20Shot%202021-02-11%20at%209.15.39%20PM.png)
 
 
+***
+
+### **Feature Updates**
+
+- [X] ~~Adding Animation to message~~
+- [X] ~~Adding at least one more additional bet selection~~
+- [ ] Adding Animation to Dice Roll
+- [ ] Adding Sound Effect to Dice Roll
+- [ ] Expanding Bet Selections 
 
 
 ### Credits: 
@@ -60,12 +68,14 @@ Homepage Banner Art: [UClipArt@RosaLee](https://www.uclipart.com/user/@Rosalee.h
 
 Background Img for Game: [CleanPNG](https://www.cleanpng.com/png-iloilo-city-china-macro-store-future-time-chinese-694217/preview.html) 
 
-Animation used in both Game: [Animate.Sytle](https://animate.style/)
+Animation used in both Game: [Animate.Style](https://animate.style/)
 
 Rules and Format for the Table: [World Casino Index](https://www.worldcasinoindex.com/table-games/sic-bo/)
 
 Various CSS Tricks: [CSS Tricks](https://css-tricks.com)
 
 Fonts: [Google Fonts](https://fonts.google.com/specimen/ZCOOL+XiaoWei?subset=chinese-simplified&preview.text=%E4%BB%96%E4%BB%AC%E6%89%80%E6%9C%89%E7%9A%84%E8%AE%BE%E5%A4%87%E5%92%8C%E4%BB%AA%E5%99%A8%E5%BD%B7%E4%BD%9B%E9%83%BD%E6%98%AF%E6%9C%89%E7%94%9F%E5%91%BD%E7%9A%84%E3%80%82&preview.text_type=custom)
+
+Techologies Icon: [Github](https://github.com/FortAwesome/Font-Awesome/issues/11419)
 
 
