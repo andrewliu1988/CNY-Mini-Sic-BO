@@ -20,6 +20,7 @@ body {
   background-color: #fef8e5;
   text-align: center;
   cursor: url(./images/cow-face-samsung.png), auto;
+  font-weight: bolder;
 }
 
 .startBtn {
@@ -93,5 +94,5 @@ footer {
   position: absolute;
   bottom: 0;
   margin: 0 auto;
-  text-shadow: 0 0 0;
+  font-weight: bold;
 }
